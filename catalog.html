@@ -9,25 +9,39 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
 <header class="site-header">
     <div class="site-header__inner">
         <a class="site-header__logo" href="index.html">ShopProject</a>
         <nav class="site-nav" aria-label="Основная навигация">
             <ul class="site-nav__list">
-                <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-                <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="product.html">Товар</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="order.html">Заявка</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
     </div>
 </header>
-<main>
+
+<main id="main">
     <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
         <span class="breadcrumbs__current">Каталог</span>
     </nav>
+
     <section class="section">
         <h1>Каталог товаров</h1>
         <p>
@@ -44,33 +58,44 @@
                 <fieldset>
                     <legend>Категория</legend>
 
-                    <label>
-                        <input type="checkbox" name="category" value="all">
-                        Все товары
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="category" value="popular">
-                        Популярные
-                    </label>
-
-                    <label>
-                        <input type="checkbox" name="category" value="new">
-                        Новинки
-                    </label>
+                    <ul class="filters-form__list">
+                        <li>
+                            <label>
+                                <input type="checkbox" name="category" value="all">
+                                Все товары
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="category" value="popular">
+                                Популярные
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" name="category" value="new">
+                                Новинки
+                            </label>
+                        </li>
+                    </ul>
                 </fieldset>
 
                 <fieldset>
                     <legend>Цена</legend>
 
-                    <label for="price-from">От</label>
-                    <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
-                    <label for="price-to">До</label>
-                    <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+                    <ul class="filters-form__list">
+                        <li>
+                            <label for="price-from">От</label>
+                            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+                        </li>
+                        <li>
+                            <label for="price-to">До</label>
+                            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+                        </li>
+                    </ul>
                 </fieldset>
 
-                <button class="button" type="submit">Применить</button>
+                <button class="button button--primary" type="submit">Применить</button>
             </form>
         </aside>
 
@@ -105,7 +130,7 @@
 
 <footer class="site-footer" id="contacts">
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    <p>Дисциплина: фронтенд и бэкенд разработка</p>
 </footer>
 </body>
 </html>
